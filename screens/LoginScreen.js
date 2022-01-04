@@ -1,94 +1,109 @@
-
-import React from 'react'
+import { useNavigation } from '@react-navigation/core'
+import React, { useEffect, useState } from 'react'
 import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
-
+import { auth } from '../../../../Downloads/Login/Login/firebase'
 
 const LoginScreen = () => {
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
   return (
-    <KeyboardAvoidingView
-      style={styles.container}
-      behavior="padding"
-    >
-      <View style={styles.inputContainer}>
-        <TextInput
-          placeholder="Email"
-          value={email}
-          onChangeText={text => setEmail(text)}
-          style={styles.input}
-        />
-        <TextInput
-          placeholder="Password"
-          value={password}
-          onChangeText={text => setPassword(text)}
-          style={styles.input}
-          secureTextEntry
-        />
-      </View>
+    <KeyboardAvoidingView style={styles.container} behaviour="padding">
+      <View style={styles.container}>
+        {items.map((item, index) => (
+          <View key={index} style={{ alignItems: "center", marginTop: -100 }}>
+            <Image
+              source={item.image1}
+              style={{ width: 200, height: 200, resizeMode: "stretch" }}
+            ></Image>
+          </View>
+        ))}
+
+        <View style={styles.inputView}>
+          <View
+            style={{
+              marginRight: "90%",
+              alignItems: "center",
+              justifyContent: "center",
+              marginTop: 35,
+            }}
+          >
+            
+          </View>
+          <Ionicons name="mail-sharp" size={24} style={{marginRight:250,bottom:25}} />
 
 
-      <View style={styles.buttonContainer}>
-        <TouchableOpacity
-          style={styles.button}
-        >
-          <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
+
         <TouchableOpacity
-          style={[styles.button, styles.buttonOutline]}
+
         >
-          <Text style={styles.buttonOutlineText}>Register</Text>
+          <Text style={styles.signupText}>               SignUp               </Text>
         </TouchableOpacity>
       </View>
     </KeyboardAvoidingView>
-  )
+  );
 }
 
-export default LoginScreen
+const items = [
+  {
+    image1: require("../images/door1.png"),
+  },
+];
 
 const styles = StyleSheet.create({
   container: {
+    flex: 2,
+    backgroundColor: "#990F02",
+    alignItems: "center",
+    justifyContent: "center",
+    bottom: 10,
+  },
+  inputView: {
+    backgroundColor: "#ffffff",
+    borderRadius: 25,
+    width: "80%",
+    height: 45,
+    marginBottom: 15,
+    alignItems: "center",
+  },
+
+  TextInput: {
+    height: 45,
+    width: "80%",
+    borderRadius: 25,
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  inputContainer: {
-    width: '80%'
-  },
-  input: {
-    backgroundColor: 'white',
-    paddingHorizontal: 15,
-    paddingVertical: 10,
-    borderRadius: 10,
-    marginTop: 5,
-  },
-  buttonContainer: {
-    width: '60%',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 40,
-  },
-  button: {
-    backgroundColor: '#0782F9',
-    width: '100%',
     padding: 15,
-    borderRadius: 10,
-    alignItems: 'center',
+    marginLeft: 20,
+    marginBottom: -220,
+    alignItems: "center",
+    bottom: 140,
   },
-  buttonOutline: {
-    backgroundColor: 'white',
-    marginTop: 5,
-    borderColor: '#0782F9',
-    borderWidth: 2,
+
+  forgot_button: {
+    height: 30,
+    position: "absolute",
+
+    bottom: 130,
   },
-  buttonText: {
-    color: 'white',
-    fontWeight: '700',
-    fontSize: 16,
+
+  loginBtn: {
+    width: "40%",
+    borderRadius: 25,
+    height: 50,
+
+    alignItems: "center",
+    justifyContent: "center",
+    bottom: -30,
+    backgroundColor: "#ffffff",
   },
-  buttonOutlineText: {
-    color: '#0782F9',
-    fontWeight: '700',
-    fontSize: 16,
+  signupBtn: {
+    width: "40%",
+    borderRadius: 50,
+
+    height: 50,
+    alignItems: "center",
+    justifyContent: "center",
+    bottom: -50,
+    backgroundColor: "#ffffff",
   },
-})
+});
