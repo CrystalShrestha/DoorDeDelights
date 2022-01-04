@@ -4,7 +4,8 @@ import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, Vi
 
 
 const LoginScreen = () => {
-
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
   return (
     <KeyboardAvoidingView
       style={styles.container}
