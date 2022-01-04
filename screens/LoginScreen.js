@@ -6,6 +6,39 @@ import { auth } from '../../../../Downloads/Login/Login/firebase'
 const LoginScreen = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+
+  const navigation = useNavigation()
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged(user => {
+      if (user) {
+        navigation.replace("Home")
+      }
+    })
+
+    return unsubscribe
+  }, [])
+
+  const handleSignUp = () => {
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then(userCredentials => {
+        const user = userCredentials.user;
+        console.log('Registered with:', user.email);
+      })
+      .catch(error => alert(error.message))
+  }
+
+  const handleLogin = () => {
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then(userCredentials => {
+        const user = userCredentials.user;
+        console.log('Logged in with:', user.email);
+      })
+      .catch(error => alert(error.message))
+  }
+
   return (
     <KeyboardAvoidingView
       style={styles.container}
@@ -46,66 +79,51 @@ const LoginScreen = () => {
   )
 }
 
-const items = [
-  {
-    image1: require("../images/door1.png"),
-  },
-];
+export default LoginScreen
 
 const styles = StyleSheet.create({
   container: {
-    flex: 2,
-    backgroundColor: "#990F02",
-    alignItems: "center",
-    justifyContent: "center",
-    bottom: 10,
-  },
-  inputView: {
-    backgroundColor: "#ffffff",
-    borderRadius: 25,
-    width: "80%",
-    height: 45,
-    marginBottom: 15,
-    alignItems: "center",
-  },
-
-  TextInput: {
-    height: 45,
-    width: "80%",
-    borderRadius: 25,
     flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  inputContainer: {
+    width: '80%'
+  },
+  input: {
+    backgroundColor: 'white',
+    paddingHorizontal: 15,
+    paddingVertical: 10,
+    borderRadius: 10,
+    marginTop: 5,
+  },
+  buttonContainer: {
+    width: '60%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 40,
+  },
+  button: {
+    backgroundColor: '#0782F9',
+    width: '100%',
     padding: 15,
-    marginLeft: 20,
-    marginBottom: -220,
-    alignItems: "center",
-    bottom: 140,
+    borderRadius: 10,
+    alignItems: 'center',
   },
-
-  forgot_button: {
-    height: 30,
-    position: "absolute",
-
-    bottom: 130,
+  buttonOutline: {
+    backgroundColor: 'white',
+    marginTop: 5,
+    borderColor: '#0782F9',
+    borderWidth: 2,
   },
-
-  loginBtn: {
-    width: "40%",
-    borderRadius: 25,
-    height: 50,
-
-    alignItems: "center",
-    justifyContent: "center",
-    bottom: -30,
-    backgroundColor: "#ffffff",
+  buttonText: {
+    color: 'white',
+    fontWeight: '700',
+    fontSize: 16,
   },
-  signupBtn: {
-    width: "40%",
-    borderRadius: 50,
-
-    height: 50,
-    alignItems: "center",
-    justifyContent: "center",
-    bottom: -50,
-    backgroundColor: "#ffffff",
+  buttonOutlineText: {
+    color: '#0782F9',
+    fontWeight: '700',
+    fontSize: 16,
   },
-});
+})
