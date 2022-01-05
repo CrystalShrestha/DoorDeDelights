@@ -18,4 +18,18 @@ import {
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { add } from "react-native-reanimated";
 
+export default function SignupScreen() {
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [cpassword, setCpassword] = useState("");
+  const[address,setAddress]=useState("");
+  const [email, setEmail] = useState("");
+  const [phonenumber, setPhonenumber] = useState("");
+
+  const navigation = useNavigation();
+  const [data, setData] = React.useState({
+    password: '',
+    check_textInputChange: false,
+    secureTextEntry: true,
+  })
 
