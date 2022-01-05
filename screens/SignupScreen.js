@@ -32,4 +32,21 @@ export default function SignupScreen() {
     check_textInputChange: false,
     secureTextEntry: true,
   })
+  
+  const handleSignup = () => {
+    if (password!==cpassword){
+      alert("Password dont match")
+      return
+    }
+    auth
+    .createUserWithEmailAndPassword(email,password)
+    .then((response)=>{
+      const uid = response.user.uid
+      const data ={
+        id: uid,
+        email:email,
+        name:name,
+        address:address,
+        phonenumber:phonenumber
+      }
 
