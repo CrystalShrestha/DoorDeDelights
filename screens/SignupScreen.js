@@ -74,3 +74,63 @@ export default function SignupScreen() {
       alert(error)
     })
   }
+  return (
+    <View style={styles.container}>
+      {items.map((item, index) => (
+        <View key={index} style={{ alignItems: "center", marginTop: -100 }}>
+          <Image
+            source={item.image}
+            style={{ width: 200, height: 200, resizeMode: "stretch" }}
+          ></Image>
+        </View>
+      ))}
+
+      <StatusBar style="auto" />
+      <View style={styles.inputView}>
+        <View
+          style={{
+            marginRight: "80%",
+            alignItems: "center",
+            justifyContent: "center",
+            marginTop: 10,
+          }}
+        >
+          <Ionicons name="person-sharp" size={24} />
+        </View>
+
+        <TextInput
+          style={styles.TextInput}
+          placeholder="Full Name."
+          onChange={(event) => {
+            setName(event.target.value);
+          }}
+          value={name}
+          placeholderTextColor="#003f5c"
+          onChangeText={text => setName(text)}
+        />
+      </View>
+
+      <View style={styles.inputView}>
+        <View
+          style={{
+            marginRight: "80%",
+            alignItems: "center",
+            justifyContent: "center",
+            marginTop: 10,
+          }}
+        >
+          
+        </View>
+        <TouchableOpacity onPress={updateSecureTextEntry}>
+          <Icon name="check" color="black" size={24} style={{marginLeft:240,bottom:-2}} />
+          </TouchableOpacity>
+          <Ionicons name="key-sharp" size={24}style={{marginRight:240,marginBottom:-20, bottom:23}} />
+        <TextInput
+          style={styles.TextInput}
+          placeholder="Password."
+          value={password}
+          placeholderTextColor="#003f5c"
+          onChangeText={password => setPassword(password)}
+          secureTextEntry={data.secureTextEntry ? true : false}
+        />
+      </View>
