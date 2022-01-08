@@ -57,3 +57,20 @@ export default function SignupScreen() {
         phonenumber:phonenumber
       }
 
+
+      const userRef= firebase.firestore().collection('users')
+      userRef
+        .doc(uid)
+        .set(data)
+        .then(() => {
+          navigation.navigate('Home, {user: data')
+          
+        })
+        .catch((error) => {
+          alert(error)
+        })
+    })
+    .catch((error) => {
+      alert(error)
+    })
+  }
