@@ -29,3 +29,43 @@ const selectitem = (item, checkboxValue)=>dispatch({
     ...item,
     checkboxValue:checkboxValue}
 })
+const  cartItems= useSelector(
+  state=> state.cartReducer.selectedItems.items 
+  );
+
+  const isFastInCart= (ffood, cartItems)=>
+    Boolean(cartItems.find((item)=> item.title === ffood.title));
+return (
+  <ScrollView showsVerticalScrollIndicator={false}>
+  {fastfoods.map((ffood,index)=>(
+  <View key={index}>
+  <View style={styles.fastItemStyle}>
+    <BouncyCheckbox
+    iconStyle={{borderColor:'lightgray', borderRadius:0}}
+    fillColor='green'
+    isChecked={isFastInCart(ffood,cartItems)}
+    onPress={(checkboxValue)=>selectitem(ffood,checkboxValue)}/>
+    
+    <FastFoodInfo ffood={ffood}/>
+    <FastFoodImage ffood={ffood}/>
+    </View>
+    <Divider width={0.5} orientation='vertical'/>
+
+  </View>
+  ))}
+       <ViewCart navigation={navigation}/>
+    </ScrollView>
+);
+}
+const FastFoodInfo=(props)=>(
+  <View style={{width:240, justifyContent:'space-evenly'}}>
+    <Text style={styles.titleStyle}>{props.ffood.title}</Text>
+    <Text>{props.ffood.description}</Text>
+    <Text>{props.ffood.price}</Text>
+  </View>
+);
+const FastFoodImage=(props)=>(
+  <View>
+    <Image source={{uri:props.ffood.image}} style={{width:90,height:90,borderRadius:8,marginLeft:-30}}/>
+  </View>
+)
