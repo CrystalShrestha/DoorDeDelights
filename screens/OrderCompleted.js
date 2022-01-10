@@ -5,6 +5,7 @@ import LottieView from "lottie-react-native";
 import firebase from "../firebase";
 import MenuItems from "../components/restaurantDetail/MenuItems";
 
+
 export default function OrderCompleted() {
   const [lastOrder, setLastOrder] = useState({
     items: [
