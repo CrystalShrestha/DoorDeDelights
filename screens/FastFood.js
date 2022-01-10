@@ -7,3 +7,25 @@ import ViewCart from '../components/restaurantDetail/ViewCart'
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 
+const styles = StyleSheet.create({
+  fastItemStyle: {
+    flexDirection:'row',
+    justifyContent:'space-between',
+    margin:20,
+  },
+  titleStyle:{
+    fontSize:19,
+    fontWeight:'600'
+  }
+})
+
+export default function Fastfood({navigation}) {
+const dispatch= useDispatch();
+
+
+const selectitem = (item, checkboxValue)=>dispatch({
+  type:'ADD_TO_CART', 
+  payload:{
+    ...item,
+    checkboxValue:checkboxValue}
+})
