@@ -66,3 +66,8 @@ const PickupInfo=(props)=>(
     <Text>{props.pickup.price}</Text>
   </View>
 );
+const PickupImage=(props)=>(
+    <View>
+      <Image source={{uri:props.pickup.image}} style={{width:90,height:90,borderRadius:8,marginLeft:-30}}/>
+    </View>
+  )
