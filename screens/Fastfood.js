@@ -29,3 +29,36 @@ const pickup=[
   price:'$5.00',
   image: 'https://www.seriouseats.com/thmb/aZ3RKlIllcKUTZV_GWyddjIZZEs=/1125x1125/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2020__04__20200416-chicken-nuggets-tim-chin-5-eeb817c772bc4a5c884d088abd85d13f.jpg'
 },
+{
+  title: "Mac & Cheese",
+  description:'Creamy and filling.',
+  price:'$9.40',
+  image: 'https://www.dinneratthezoo.com/wp-content/uploads/2019/07/bacon-mac-and-cheese-4.jpg'
+},
+{
+  title: "Breakfast Burrito",
+  description:'Start your day with filling burrito.',
+  price:'$1.70',
+  image: 'https://www.onceuponachef.com/images/2018/03/Breakfast-Burritos.jpg'
+},
+{
+  title: "Hamburger",
+  description:'The one Baruto likes.',
+  price:'$10.70',
+  image: 'https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/165384.jpg'
+},
+{
+  title: "Veg Burger",
+  description:'With goodness of all the veggies you want.',
+  price:'$7.70',
+  image: 'https://manofmany.com/wp-content/uploads/2020/01/McDonalds-McVeggie-Burger-1.jpg'
+},
+{
+  title: "Onion Rings",
+  description:'Why get fries when onion ringsare there.',
+  price:'$2.00',
+  image: 'https://img.buzzfeed.com/thumbnailer-prod-us-east-1/7f539fc41a5543aebfe03afed73a0b48/BFV9112_MozzarellaStickOnionRings.jpg'
+},
+
+];
+
