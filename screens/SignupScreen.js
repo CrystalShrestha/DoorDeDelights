@@ -134,3 +134,29 @@ export default function SignupScreen() {
           secureTextEntry={data.secureTextEntry ? true : false}
         />
       </View>
+      <StatusBar style="auto" />
+      <View style={styles.inputView}>
+        <View
+          style={{
+            marginRight: "90%",
+            alignItems: "center",
+            justifyContent: "center",
+            marginTop: 10,
+            
+          }}
+        >
+          
+        </View>
+        <TouchableOpacity onPress={updateSecureTextEntry}>
+          <Icon name="check" color="black" size={24} style={{marginLeft:240,bottom:-2}} />
+          </TouchableOpacity>
+          <Ionicons name="key-sharp" size={24} style={{marginRight:240, marginBottom:-20,bottom:23}} />
+        <TextInput
+          style={styles.TextInput}
+          placeholder="Confirm Password."
+          value={cpassword}
+          placeholderTextColor="#003f5c"
+          onChangeText={cpassword => setCpassword(cpassword)}
+          secureTextEntry={data.secureTextEntry ? true : false}
+        />
+      </View>
