@@ -24,7 +24,6 @@ export default function ForgetPssword() {
           ></Image>
           
         </View>
-          
       ))}
 
       <StatusBar style="auto" />
