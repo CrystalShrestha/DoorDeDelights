@@ -48,3 +48,27 @@ const  cartItems= useSelector(
       isChecked={isDrinkInCart(drink,cartItems)}
       onPress={(checkboxValue)=>selectitem(drink,checkboxValue)}/>)}
       <DrinkInfo drink={drink}/>
+      <DrinkImage drink={drink}
+      />
+      </View>
+      <Divider width={0.5} orientation='vertical'/>
+ 
+    </View>
+    ))}
+         <ViewCart navigation={navigation}/>
+      </ScrollView>
+  );
+}
+
+const DrinkInfo=(props)=>(
+  <View style={{width:240, justifyContent:'space-evenly'}}>
+    <Text style={styles.titleStyle}>{props.drink.title}</Text>
+    <Text>{props.drink.description}</Text>
+    <Text>{props.drink.price}</Text>
+  </View>
+);
+const DrinkImage=(props)=>(
+  <View>
+    <Image source={{uri:props.drink.image}} style={{width:90,height:90,borderRadius:8,marginLeft:-30}}/>
+  </View>
+)
