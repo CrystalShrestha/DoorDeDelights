@@ -5,6 +5,31 @@ import { Divider } from 'react-native-elements/dist/divider/Divider';
 import BouncyCheckbox from 'react-native-bouncy-checkbox';
 import ViewCart from '../components/restaurantDetail/ViewCart'
 import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+
+const drinks=[
+  {
+  title: "Coca-cola",
+  description:'chill your mind out',
+  price:'$1.70',
+  image: 'https://images.heb.com/is/image/HEBGrocery/000145352'
+},
+{
+  title: "Fanta",
+  description:'chill your mind out',
+  price:'$1.70',
+  image: 'https://static.countdown.co.nz/assets/product-images/zoom/9300675015172.jpg'
+},
+{
+  title: "Mountain Dew",
+  description:'chill your mind out',
+  price:'$1.70',
+  image: 'https://static.countdown.co.nz/assets/product-images/zoom/9300675015172.jpg'
+},
+{
+
+
+
 
 const styles = StyleSheet.create({
     drinkItemStyle: {
