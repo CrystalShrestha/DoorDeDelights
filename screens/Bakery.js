@@ -106,7 +106,7 @@ export default function Bakery({navigation}) {
     const isBakeInCart= (bake, cartItems)=>
       Boolean(cartItems.find((item)=> item.title === bake.title));
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>
+    <><ScrollView showsVerticalScrollIndicator={false}>
     {bakery.map((bake,index)=>(
     <View key={index}>
     <View style={styles.bakeryItemStyle}>
@@ -122,8 +122,9 @@ export default function Bakery({navigation}) {
  
     </View>
     ))}
-         <ViewCart navigation={navigation}/>
+        
       </ScrollView>
+       <ViewCart navigation={navigation}/></>
   );
 }
 
