@@ -124,13 +124,5 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     bottom: 10,
   },
-  // logoutBtn: {
-  //   width: "40%",
-  //   borderRadius: 25,
-  //   height: 50,
-  //   alignItems: "center",
-  //   justifyContent: "center",
-  //   bottom: -1,
-  //   backgroundColor: "#ffffff",
-  // },
+
 });
