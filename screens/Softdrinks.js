@@ -64,7 +64,45 @@ const drinks=[
     image: 'https://static.countdown.co.nz/assets/product-images/zoom/9300675015172.jpg'
   },
   
-  
+  title: "Pepsi",
+  description:'chill your mind out',
+  price:'$1.70',
+  image: 'https://static.countdown.co.nz/assets/product-images/zoom/9300675015172.jpg'
+},
+{
+  title: "Dr.Pepper",
+  description:'chill your mind out',
+  price:'$1.70',
+  image: 'https://static.countdown.co.nz/assets/product-images/zoom/9300675015172.jpg'
+},
+{
+  title: "Sprite",
+  description:'chill your mind out',
+  price:'$1.70',
+  image: 'https://static.countdown.co.nz/assets/product-images/zoom/9300675015172.jpg'
+},
+{
+  title: "Slice",
+  description:'chill your mind out',
+  price:'$1.70',
+  image: 'https://static.countdown.co.nz/assets/product-images/zoom/9300675015172.jpg'
+},
+{
+  title: "Red Bull",
+  description:'chill your mind out',
+  price:'$1.70',
+  image: 'https://static.countdown.co.nz/assets/product-images/zoom/9300675015172.jpg'
+},
+{
+  title: "Slice",
+  description:'chill your mind out',
+  price:'$1.70',
+  image: 'https://static.countdown.co.nz/assets/product-images/zoom/9300675015172.jpg'
+},
+
+
+];
+
   ];
   
 
