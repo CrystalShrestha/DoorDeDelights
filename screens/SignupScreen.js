@@ -160,3 +160,51 @@ export default function SignupScreen() {
           secureTextEntry={data.secureTextEntry ? true : false}
         />
       </View>
+      <StatusBar style="auto" />
+      <View style={styles.inputView}>
+        <View
+          style={{
+            marginRight: "80%",
+            alignItems: "center",
+            justifyContent: "center",
+            marginTop: 10,
+          }}
+        >
+          <Ionicons name="home-sharp" size={24} />
+        </View>
+
+        <TextInput
+          style={styles.TextInput}
+          placeholder="Address."
+
+          value={address}
+          placeholderTextColor="#003f5c"
+          onChangeText={address => setAddress(address)}
+          
+        />
+      </View>
+
+      <StatusBar style="auto" />
+      <View style={styles.inputView}>
+        <View
+          style={{
+            marginRight: "80%",
+            alignItems: "center",
+            justifyContent: "center",
+            marginTop: 10,
+          }}
+        >
+          <Ionicons name="mail-sharp" size={24} />
+        </View>
+
+        <TextInput
+          style={styles.TextInput}
+          placeholder="Email."
+          // onChange={(event) => {
+          //   setEmail(event.target.value);
+          // }}
+          value={email}
+          placeholderTextColor="#003f5c"
+          onChangeText={email => setEmail(email)}
+        />
+      </View>
