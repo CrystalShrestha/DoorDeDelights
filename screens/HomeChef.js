@@ -9,7 +9,7 @@ const chefs=[
   title: "Chef Noah",
   description:'Experienced for making authentic thai and chinese food. Holds diiferent titles for his food',
   contact:'contact: 98563214',
-  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWpcL8mapuA3ILF0XeuOj4vSIq4RQDd6AFlA&usqp=CAU'
+  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2rrTA2AlwmaYPHBI3X8AIZDAyJ2m9Ir1TDw&usqp=CAU'
 },
 {
   title: "Chef Anna",
@@ -53,7 +53,6 @@ const chefs=[
   contact:'contact: 987456321',
   image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqZHCpUJnnaptDUCgtPeqDRI0fmm7vnaigng&usqp=CAU'
 },
-
 
 ];
 
