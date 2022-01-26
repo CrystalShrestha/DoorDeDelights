@@ -1,50 +1,100 @@
-import React from "react";
-import { View, Text, Image, ScrollView } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
-import BottomTabs from "../components/home/BottomTabs";
-import { Divider } from "react-native-elements";
+import { View, Text, Image, StyleSheet } from 'react-native';
+import React from 'react';
+import { ScrollView } from 'react-native-gesture-handler';
+import { Divider } from 'react-native-elements/dist/divider/Divider';
 
-const items = [
+
+const chefs=[
   {
-    image: require("../chefs/Samana.jpg"),
-    text: "Chef Samana",
-  },
-  {
-    image: require("../chefs/pika.jpg"),
-    text: "Chef Pika",
-  },
-  {
-    image: require("../chefs/Bipina.jpg"),
-    text: "Chef Bips",
-  },
-  {
-    image: require("../chefs/Crystal.jpg"),
-    text: "Chef Kisstal",
-  },
+  title: "",
+  description:'',
+  contact:'',
+  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWpcL8mapuA3ILF0XeuOj4vSIq4RQDd6AFlA&usqp=CAU'
+},
+{
+  title: "",
+  description:'',
+  contact:'',
+  image: 'https://st4.depositphotos.com/22230270/23669/v/1600/depositphotos_236693120-stock-illustration-illustration-female-chef-cartoon.jpg'
+},
+{
+  title: "",
+  description:'',
+  contact:'',
+  image: 'https://image.freepik.com/free-vector/cute-chef-boy-holding-ladle-soup-chef-cartoon_296684-321.jpg'
+},
+{
+  title: "",
+  description:'',
+  contact:'',
+  image: 'https://img.freepik.com/free-vector/cute-chef-boy-holding-pizza-chef-cartoon_296684-319.jpg?size=338&ext=jpg'
+},
+{
+  title: "",
+  description:'',
+  contact:'',
+  image: 'https://static.vecteezy.com/system/resources/previews/002/042/980/original/cartoon-pizza-chef-vector.jpg'
+},
+{
+  title: "",
+  description:'',
+  contact:'',
+  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCOCylq3PGQ1fsDxQKPOgzQY2qe1FEkQfLxg&usqp=CAU'
+},
+{
+  title: "",
+  description:'',
+  contact:'',
+  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0pYT4iiHZITcnj8vi0ry_mzdm3eVtEQebfA&usqp=CAU'
+},
+{
+  title: "",
+  description:'',
+  contact:'',
+  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqZHCpUJnnaptDUCgtPeqDRI0fmm7vnaigng&usqp=CAU'
+},
+
+
 ];
+
+const styles = StyleSheet.create({
+    chefItemStyle: {
+      flexDirection:'row',
+      justifyContent:'space-between',
+      margin:20,
+    },
+    titleStyle:{
+      fontSize:19,
+      fontWeight:'600'
+    }
+})
 
 export default function HomeChef() {
   return (
-    <SafeAreaView style={{ backgroundColor: "#ffffff", flex: 1 }}>
-      <View style={{ backgroundColor: "white", padding: 15 }}></View>
-
-      <ScrollView showsVerticalScrollIndicator={false}>
-        {items.map((item, index) => (
-          <View key={index} style={{ alignItems: "center", marginRight: 30 }}>
-            <Image
-              source={item.image}
-              style={{
-                width: 370,
-                height: 400,
-                resizeMode: "contain",
-              }}
-            />
-            <Text style={{ fontSize: 30, fontWeight: "900" }}>{item.text}</Text>
-          </View>
-        ))}
+    <ScrollView showsVerticalScrollIndicator={false}>
+    {chefs.map((chef,index)=>(
+    <View key={index}>
+    <View style={styles.chefItemStyle}>
+      <ChefInfo chef={chef}/>
+      <ChefImage chef={chef}/>
+      </View>
+      <Divider width={0.5} orientation='vertical'/>
+ 
+    </View>
+    ))}
       </ScrollView>
-      <Divider width={1} />
-      <BottomTabs />
-    </SafeAreaView>
   );
 }
+
+const ChefInfo=(props)=>(
+  <View style={{width:240, justifyContent:'space-evenly'}}>
+    <Text style={styles.titleStyle}>{props.chef.title}</Text>
+    <Text>{props.chef.description}</Text>
+    <Text>{props.chef.contact}</Text>
+  </View>
+);
+const ChefImage=(props)=>(
+  <View>
+    <Image source={{uri:props.chef.image}} style={{width:90,height:90,borderRadius:8,marginLeft:-30}}/>
+  </View>
+)
