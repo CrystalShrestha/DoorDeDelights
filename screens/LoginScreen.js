@@ -38,12 +38,7 @@ export default function LoginScreen() {
       .catch((error) => alert(error.message));
   }
 
-  // const handlePasswordChange = (val) => {
-  //   setData({
-  //     ...data,
-  //     password: val,
-  //   });
-  // }
+ 
   const updateSecureTextEntry = () => {
     setData({
       ...data,
@@ -116,7 +111,7 @@ export default function LoginScreen() {
           </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.loginBtn} onPress={()=>navigation.navigate("Home")}>
+        <TouchableOpacity style={styles.loginBtn} onPress={()=> navigation.navigate("Home")}>
           <Text style={styles.loginText}>                Login                </Text>
         </TouchableOpacity>
 
