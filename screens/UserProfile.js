@@ -193,6 +193,7 @@ import {
     );
   }
   
+  //Image
   const item = [
     {
       image1: require("../assets/images/Location.png"),
