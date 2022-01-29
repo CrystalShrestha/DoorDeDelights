@@ -4,7 +4,8 @@ import { ScrollView } from 'react-native-gesture-handler';
 import { Divider } from 'react-native-elements/dist/divider/Divider';
 import BouncyCheckbox from 'react-native-bouncy-checkbox';
 import ViewCart from '../components/restaurantDetail/ViewCart'
-
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 const bakery=[
   {
@@ -89,7 +90,21 @@ const styles = StyleSheet.create({
 })
 
 export default function Bakery({navigation}) {
+  const dispatch= useDispatch();
 
+
+  const selectitem = (item, checkboxValue)=>dispatch({
+    type:'ADD_TO_CART', 
+    payload:{
+      ...item,
+      checkboxValue:checkboxValue}
+  })
+  const  cartItems= useSelector(
+    state=> state.cartReducer.selectedItems.items 
+    );
+  
+    const isBakeInCart= (bake, cartItems)=>
+      Boolean(cartItems.find((item)=> item.title === bake.title));
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
     {bakery.map((bake,index)=>(
