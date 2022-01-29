@@ -1,22 +1,19 @@
 import { StatusBar } from "expo-status-bar";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
-import navigation from "../navigation";
-import { auth } from "../firebase";
 import firebase from "firebase";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Icon } from "react-native-elements";
+import { auth } from "../firebase";
+
 import {
   StyleSheet,
   Text,
   View,
   Image,
   TextInput,
-  Button,
   TouchableOpacity,
 } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import { add } from "react-native-reanimated";
+import { Icon } from "react-native-elements/dist/icons/Icon";
 
 export default function SignupScreen() {
   const [name, setName] = useState("");
@@ -32,6 +29,7 @@ export default function SignupScreen() {
     check_textInputChange: false,
     secureTextEntry: true,
   })
+
 
   const updateSecureTextEntry = () => {
     setData({
@@ -74,6 +72,8 @@ export default function SignupScreen() {
       alert(error)
     })
   }
+
+
   return (
     <View style={styles.container}>
       {items.map((item, index) => (
@@ -134,6 +134,7 @@ export default function SignupScreen() {
           secureTextEntry={data.secureTextEntry ? true : false}
         />
       </View>
+
       <StatusBar style="auto" />
       <View style={styles.inputView}>
         <View
@@ -160,6 +161,8 @@ export default function SignupScreen() {
           secureTextEntry={data.secureTextEntry ? true : false}
         />
       </View>
+
+{/* //hewooo */}
       <StatusBar style="auto" />
       <View style={styles.inputView}>
         <View
@@ -208,3 +211,83 @@ export default function SignupScreen() {
           onChangeText={email => setEmail(email)}
         />
       </View>
+
+      <StatusBar style="auto" />
+      <View style={styles.inputView}>
+        <View
+          style={{
+            marginRight: "80%",
+            alignItems: "center",
+            justifyContent: "center",
+            marginTop: 10,
+          }}
+        >
+          <Ionicons name="calculator-sharp" size={24} />
+        </View>
+
+        <TextInput
+          style={styles.TextInput}
+          placeholder="Phone Number."
+          // onChange={(event) => {
+          //   setPhonenumber(event.target.value);
+          // }}
+          value={phonenumber}
+          placeholderTextColor="#003f5c"
+          onChangeText={text => setPhonenumber(text)}
+        />
+      </View>
+
+      <TouchableOpacity onPress={handleSignup} style={styles.signupBtn}>
+        <Text style={styles.signupText}>SignUp</Text>
+      </TouchableOpacity>
+    </View>
+  );
+}
+
+const items = [
+  {
+    image: require("../images/door1.png"),
+    position: "top",
+  },
+];
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#990F02",
+    alignItems: "center",
+    justifyContent: "center",
+    bottom: 10,
+  },
+  inputView: {
+    backgroundColor: "#ffffff",
+    borderRadius: 25,
+    width: "70%",
+    height: 45,
+    marginBottom: 15,
+    alignItems: "center",
+  },
+
+  TextInput: {
+    height: 40,
+    width: "80%",
+    borderRadius: 25,
+    flex: 1,
+    padding: 15,
+    marginLeft: 20,
+    marginBottom: -220,
+    alignItems: "center",
+    bottom: 130,
+  },
+
+  signupBtn: {
+    width: "40%",
+    borderRadius: 25,
+
+    height: 45,
+    alignItems: "center",
+    justifyContent: "center",
+    bottom: -40,
+    backgroundColor: "#ffffff",
+  },
+});
