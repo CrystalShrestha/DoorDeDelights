@@ -11,7 +11,7 @@ import {
 } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
-export default function ForgetPssword() {
+export default function Forgetpassword() {
   const [password, setPassword] = useState("");
     const [confirmpassword, setConfirmPassword] = useState("");
   return (
@@ -24,6 +24,7 @@ export default function ForgetPssword() {
           ></Image>
           
         </View>
+          
       ))}
 
       <StatusBar style="auto" />
@@ -62,7 +63,7 @@ export default function ForgetPssword() {
 
 const items = [
   {
-    image1: require("././src/images/door1.png"),
+    image1: require('../images/door1.png'),
   },
 ];
 
