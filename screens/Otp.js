@@ -51,7 +51,7 @@ export default function Otp() {
 
 const items = [
   {
-    image1: require("././src/images/door1.png"),
+    image1: require('../images/door1.png'),
   },
 ];
 // const otpText=[{
