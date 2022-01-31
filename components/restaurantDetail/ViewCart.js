@@ -22,6 +22,7 @@ export default function ViewCart({ navigation }) {
     currency: "USD",
   });
 
+
   const addOrderToFireBase = () => {
     setLoading(true);
     const db = firebase.firestore();
