@@ -1,14 +1,8 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { View, Text, Image, StyleSheet } from 'react-native';
 import React from 'react';
-
-const Deals = () => {
-  return (
-    <View>
-      <Text>this is for deals</Text>
-    </View>
-  );
-};
-
-export default Deals;
-
-const styles = StyleSheet.create({});
+import { ScrollView } from 'react-native-gesture-handler';
+import { Divider } from 'react-native-elements/dist/divider/Divider';
+import BouncyCheckbox from 'react-native-bouncy-checkbox';
+import ViewCart from '../components/restaurantDetail/ViewCart'
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
