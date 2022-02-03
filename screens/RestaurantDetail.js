@@ -8,7 +8,7 @@ import ViewCart from "../components/restaurantDetail/ViewCart";
 const foods = [
   {
     title: "Lasagna",
-    description: "With butter lettuce, tomato and sauce bechamel",
+    description: "With butter lettuce, tomato and sauce bechamel ",
     price: "$21.50",
     image:
       "https://www.modernhoney.com/wp-content/uploads/2019/08/Classic-Lasagna-14-scaled.jpg",
@@ -23,7 +23,7 @@ const foods = [
   {
     title: "Pizza",
     description:
-      "Tasty Italian round bread dough topped with olive oil, tomatoes, cheeses, and other topings.",
+      "Tasty Italian round bread dough topped with olive oil, tomatoes, cheeses, and other topings.🍕",
     price: "$19.20",
     image:
       "https://www.recipetineats.com/wp-content/uploads/2020/05/Pizza-Crust-without-yeast_5-SQ.jpg",
@@ -32,7 +32,7 @@ const foods = [
     title: "Momos",
     description:
       "Delicious Nepali/Tibetan dumblings with fillings on the inside.",
-    price: "$11.20",
+    price: "$10.20",
     image:
       "https://imgk.timesnownews.com/story/iStock-1252605699.jpg?tr=w-400,h-300,fo-auto",
   },
@@ -127,8 +127,9 @@ export default function RestaurantDetail({ route, navigation }) {
 
         <MenuItems restaurantName={route.params.name} foods={foods} />
 
-        <ViewCart navigation={navigation} />
+        
       </ScrollView>
+      <ViewCart navigation={navigation} />
     </SafeAreaView>
   );
 }

@@ -30,7 +30,7 @@ export default function OrderCompleted() {
     style: "currency",
     currency: "USD",
   });
-
+//heeeeeehaaaaw
   useEffect(() => {
     const db = firebase.firestore();
     const unsubscribe = db
@@ -69,6 +69,9 @@ export default function OrderCompleted() {
         <ScrollView>
           <MenuItems
             foods={lastOrder.items}
+            drinks={lastOrder.items}
+            bakery={lastOrder.items}
+            ffood={lastOrder.items}
             hideCheckbox={true}
             marginLeft={10}
           />

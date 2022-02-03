@@ -21,6 +21,7 @@ import Deals from "./screens/Deals";
 import Desserts from "./screens/Desserts";
 import Fastfood from "./screens/Fastfood";
 import VerifyEmail from "./screens/VerifyEmail";
+import Aboutus from "./screens/Aboutus";
 
 const store = configureStore();
 
@@ -57,6 +58,7 @@ export default function RootNavigation() {
           <Stack.Screen name="Fastfood" component={Fastfood} />
           <Stack.Screen name="Desserts" component={Desserts} />
           <Stack.Screen name="VerifyEmail" component={VerifyEmail} />
+          <Stack.Screen name="Aboutus" component={Aboutus} />
         </Stack.Navigator>
       </NavigationContainer>
     </ReduxProvider>

@@ -22,13 +22,13 @@ export default function ViewCart({ navigation }) {
     currency: "USD",
   });
 
-
   const addOrderToFireBase = () => {
     setLoading(true);
     const db = firebase.firestore();
     db.collection("orders")
       .add({
         items: items,
+        
         restaurantName: restaurantName,
         createdAt: firebase.firestore.FieldValue.serverTimestamp(),
       })

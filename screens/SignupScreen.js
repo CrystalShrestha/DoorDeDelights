@@ -1,10 +1,11 @@
 import { StatusBar } from "expo-status-bar";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import navigation from "../navigation";
-import { auth } from '../firebase'
+import { auth } from "../firebase";
+import firebase from "firebase";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-
+import { Icon } from "react-native-elements";
 import {
   StyleSheet,
   Text,
@@ -15,14 +16,23 @@ import {
   TouchableOpacity,
 } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import { add } from "react-native-reanimated";
 
 export default function SignupScreen() {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
-  const [cpassword, setCpassword] = useState("");
+  const [address, setAddress] = useState("");
   const [email, setEmail] = useState("");
   const [phonenumber, setPhonenumber] = useState("");
+//New line
+  const [data, setData] = React.useState({
+    password: '',
+    check_textInputChange: false,
+    secureTextEntry: true,
+  })
 
+
+//yeta samma
   const navigation = useNavigation();
 
   const handleSignup = () => {
@@ -34,12 +44,19 @@ export default function SignupScreen() {
         const user = userCredentials.user;
 
         console.log(user.email);
+        alert("User Created Successfully");
         // console.log(user.password);
         // console.log(user.cpassword);
       })
 
-      .catch((error) => alert(error.message));
-  };
+      .catch((error) => alert(error.message)); 
+  }
+  const updateSecureTextEntry = () => {
+    setData({
+      ...data,
+      secureTextEntry: !data.secureTextEntry,
+    });
+  }
 
   return (
     <View style={styles.container}>
@@ -73,7 +90,7 @@ export default function SignupScreen() {
           }}
           value={name}
           placeholderTextColor="#003f5c"
-          onChangeText={text => setName(text)}
+          onChangeText={(text) => setName(text)}
         />
       </View>
 
@@ -86,8 +103,13 @@ export default function SignupScreen() {
             marginTop: 10,
           }}
         >
-          <Ionicons name="key-sharp" size={24} />
+
+          
         </View>
+        <TouchableOpacity onPress={updateSecureTextEntry}>
+          <Icon name="check" color="black" size={24} style={{marginLeft:240,bottom:-2}} />
+          </TouchableOpacity>
+          <Ionicons name="key-sharp" size={24} style={{marginRight:250, bottom:23}} /> 
         <TextInput
           style={styles.TextInput}
           placeholder="Password."
@@ -96,7 +118,7 @@ export default function SignupScreen() {
           // }}
           value={password}
           placeholderTextColor="#003f5c"
-          onChangeText={password => setPassword(password)}
+          onChangeText={(password) => setPassword(password)}
           secureTextEntry
         />
       </View>
@@ -111,19 +133,18 @@ export default function SignupScreen() {
             marginTop: 10,
           }}
         >
-          <Ionicons name="key-sharp" size={24} />
+          <Ionicons name="home-sharp" size={24} />
         </View>
 
         <TextInput
           style={styles.TextInput}
-          placeholder="Confirm Password."
+          placeholder="Address."
           // onChange={(event) => {
           //   setCpassword(event.target.value);
           // }}
-          value={cpassword}
+          value={address}
           placeholderTextColor="#003f5c"
-          onChangeText={cpassword => setCpassword(cpassword)}
-          secureTextEntry
+          onChangeText={(address) => setAddress(address)}
         />
       </View>
 
@@ -148,7 +169,7 @@ export default function SignupScreen() {
           // }}
           value={email}
           placeholderTextColor="#003f5c"
-          onChangeText={email => setEmail(email)}
+          onChangeText={(email) => setEmail(email)}
         />
       </View>
 
@@ -173,7 +194,7 @@ export default function SignupScreen() {
           // }}
           value={phonenumber}
           placeholderTextColor="#003f5c"
-          onChangeText={text => setPhonenumber(text)}
+          onChangeText={(text) => setPhonenumber(text)}
         />
       </View>
 

@@ -1,10 +1,8 @@
-
 import React from "react";
 import { View, Text, Image, ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import BottomTabs from "../components/home/BottomTabs";
 import { Divider } from "react-native-elements";
-
 
 const items = [
   {
@@ -22,19 +20,16 @@ const items = [
   {
     image: require("../chefs/Crystal.jpg"),
     text: "Chef Kisstal",
-  }
-
-
+  },
 ];
 
 export default function HomeChef() {
-  
   return (
     <SafeAreaView style={{ backgroundColor: "#ffffff", flex: 1 }}>
       <View style={{ backgroundColor: "white", padding: 15 }}></View>
-      
+
       <ScrollView showsVerticalScrollIndicator={false}>
-      {items.map((item, index) => (
+        {items.map((item, index) => (
           <View key={index} style={{ alignItems: "center", marginRight: 30 }}>
             <Image
               source={item.image}

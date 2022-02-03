@@ -13,23 +13,28 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 
 export default function Forgetpassword() {
   const [password, setPassword] = useState("");
-    const [confirmpassword, setConfirmPassword] = useState("");
+  const [confirmpassword, setConfirmPassword] = useState("");
   return (
     <View style={styles.container}>
       {items.map((item, index) => (
-        <View key={index} style={{ alignItems: "center",marginTop:-50}}>
+        <View key={index} style={{ alignItems: "center", marginTop: -50 }}>
           <Image
             source={item.image1}
-            style={{ width: 200, height: 200, resizeMode:'stretch' }}
+            style={{ width: 200, height: 200, resizeMode: "stretch" }}
           ></Image>
-          
         </View>
-          
       ))}
 
       <StatusBar style="auto" />
       <View style={styles.inputView}>
-      <View style={{ marginRight: '80%', alignItems:'center',justifyContent:'center',marginTop:10 }}>
+        <View
+          style={{
+            marginRight: "80%",
+            alignItems: "center",
+            justifyContent: "center",
+            marginTop: 10,
+          }}
+        >
           <Ionicons name="key-sharp" size={24} />
         </View>
         <TextInput
@@ -41,7 +46,14 @@ export default function Forgetpassword() {
         />
       </View>
       <View style={styles.inputView}>
-        <View style={{ marginRight: '80%', alignItems:'center',justifyContent:'center',marginTop:10 }}>
+        <View
+          style={{
+            marginRight: "80%",
+            alignItems: "center",
+            justifyContent: "center",
+            marginTop: 10,
+          }}
+        >
           <Ionicons name="key-sharp" size={24} />
         </View>
 
@@ -50,7 +62,9 @@ export default function Forgetpassword() {
           placeholder="Confirm Password"
           placeholderTextColor="#003f5c"
           secureTextEntry={true}
-          onChangeText={(confirmpassword) => setConfirmPassword(confirmpassword)}
+          onChangeText={(confirmpassword) =>
+            setConfirmPassword(confirmpassword)
+          }
         />
       </View>
 
@@ -63,7 +77,7 @@ export default function Forgetpassword() {
 
 const items = [
   {
-    image1: require('../images/door1.png'),
+    image1: require("../images/door1.png"),
   },
 ];
 
@@ -81,7 +95,7 @@ const styles = StyleSheet.create({
     width: "70%",
     height: 45,
     marginBottom: 15,
-    bottom:-40,
+    bottom: -40,
     alignItems: "center",
   },
 
@@ -92,19 +106,19 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 15,
     marginLeft: 20,
-    marginBottom:-220,
-    alignItems: 'center',
+    marginBottom: -220,
+    alignItems: "center",
     bottom: 130,
   },
   finishBtn: {
     width: "40%",
     borderRadius: 25,
-    
+
     height: 50,
     alignItems: "center",
     justifyContent: "center",
     bottom: -80,
     backgroundColor: "#ffffff",
-    marginBottom: 70
+    marginBottom: 70,
   },
 });
