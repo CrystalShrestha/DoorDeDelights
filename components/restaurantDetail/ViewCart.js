@@ -39,7 +39,7 @@ export default function ViewCart({ navigation }) {
         }, 2500);
       });
   };
-
+///styling
   const styles = StyleSheet.create({
     modalContainer: {
       flex: 1,
