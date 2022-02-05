@@ -4,6 +4,7 @@ import React from 'react';
 const Aboutus = () => {
   return (
     <View>
+
       <Text> Door de’ Delights is a food-delivery application that makes ordering and food takeaways easy and efficient.
         The app allows the user to order meals, desserts, and beverages by choice of their restaurant and cafes. 
         As the whole world is moving into digitization, Door de’ Delights have made the ordering and delivery of food convenient and effortless.
@@ -19,4 +20,3 @@ const Aboutus = () => {
 export default Aboutus;
 
 const styles = StyleSheet.create({});
-

@@ -10,11 +10,11 @@ import RestaurantItems, {
 import SearchBar from "../components/home/SearchBar";
 
 const YELP_API_KEY =
-  "bdRJutLhFAQJ36t7b89CWjHFBU4OKzjt9wvZzcY-nkgmvTqlNMjZWV1eG7iBQ9R74SyfxRg9LWnBAkZY06BtAZAe4d2dfX-2vuX8a1l5V7foctHfX9UKEyoM5ts3YXYx";
+  "Ybj2kOXZiOJLc-p79sVpg6wJnJGCplBmyzVuO-ax9Dh9aNbs25Ia7NBrxiYvw7FvvAptWJv6VisTCLP1l-Ej5DVfUwJMx6Zn3_PMHEu_cA5uRMha-mKhZ9VWL8lHYXYx";
 
 export default function Home({ navigation }) {
   const [restaurantData, setRestaurantData] = useState(localRestaurants);
-  const [city, setCity] = useState("San Francisco");
+  const [city, setCity] = useState("Hollywood");
   const [activeTab, setActiveTab] = useState("Delivery");
 
   const getRestaurantsFromYelp = () => {
