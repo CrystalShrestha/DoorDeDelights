@@ -51,5 +51,19 @@ To make food ordering and takeaways efficient for the customers and provide an o
 <img src="https://imgur.com/AwZioKz.png" height="30" width="30"/>
 <img src="https://imgur.com/AIpqX2y.png" height="30" width="30"/>
 <img src="https://imgur.com/fNeoC8l.png" height="30" width="30"/>
+<br>
+<br>
+<h2>Screenshots:</h2>
+<br>
+<img src="https://imgur.com/q9EoA3p.png"width="" height="200"/>
+<img src="https://imgur.com/Fp8xoQW.png"width=" " height="200"/>
+<img src="https://imgur.com/0bFMMck.png"width=" " height="200"/>
+<img src="https://imgur.com/m1N0i2d.png"width=" " height="200"/>
+<img src="https://imgur.com/XSQHMG2.png"width=" " height="200"/>
+<img src="https://imgur.com/PSNFJOF.png"width=" " height="200"/>
+<img src="https://imgur.com/GIZJvl1.png"width=" " height="200"/>
+<img src="https://imgur.com/igxIYY8.png"width=" " height="200"/>
+
+<br>
 
 
