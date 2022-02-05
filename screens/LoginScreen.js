@@ -1,41 +1,49 @@
+import { useNavigation } from '@react-navigation/core'
+import React, { useEffect, useState } from 'react'
+import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { auth } from '../../../../Downloads/Login/Login/firebase'
 
-
+const LoginScreen = () => {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
   return (
-    <KeyboardAvoidingView style={styles.container} behaviour="padding">
-      <View style={styles.container}>
-        {items.map((item, index) => (
-          <View key={index} style={{ alignItems: "center", marginTop: -100 }}>
-            <Image
-              source={item.image1}
-              style={{ width: 200, height: 200, resizeMode: "stretch" }}
-            ></Image>
-          </View>
-        ))}
-
-        <View style={styles.inputView}>
-          <View
-            style={{
-              marginRight: "90%",
-              alignItems: "center",
-              justifyContent: "center",
-              marginTop: 35,
-            }}
-          >
-            
-          </View>
-          <Ionicons name="mail-sharp" size={24} style={{marginRight:250,bottom:25}} />
+    <KeyboardAvoidingView
+      style={styles.container}
+      behavior="padding"
+    >
+      <View style={styles.inputContainer}>
+        <TextInput
+          placeholder="Email"
+          value={email}
+          onChangeText={text => setEmail(text)}
+          style={styles.input}
+        />
+        <TextInput
+          placeholder="Password"
+          value={password}
+          onChangeText={text => setPassword(text)}
+          style={styles.input}
+          secureTextEntry
+        />
+      </View>
 
 
-        </TouchableOpacity>
-
+      <View style={styles.buttonContainer}>
         <TouchableOpacity
-
+          onPress={handleLogin}
+          style={styles.button}
         >
-          <Text style={styles.signupText}>               SignUp               </Text>
+          <Text style={styles.buttonText}>Login</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={handleSignUp}
+          style={[styles.button, styles.buttonOutline]}
+        >
+          <Text style={styles.buttonOutlineText}>Register</Text>
         </TouchableOpacity>
       </View>
     </KeyboardAvoidingView>
-  );
+  )
 }
 
 const items = [
