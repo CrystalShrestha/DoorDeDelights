@@ -97,41 +97,6 @@ const  cartItems= useSelector(
   state=> state.cartReducer.selectedItems.items 
   );
 
-  const isDrinkInCart= (drink, cartItems)=>
-    Boolean(cartItems.find((item)=> item.title === drink.title));
-  return (
-    <ScrollView showsVerticalScrollIndicator={false}>
-    {drinks.map((drink,index)=>(
-    <View key={index}>
-    <View style={styles.drinkItemStyle}>
-      {hideCheckbox?(<></>):(
-      <BouncyCheckbox
-      iconStyle={{borderColor:'lightgray', borderRadius:0}}
-      fillColor='green'
-      isChecked={isDrinkInCart(drink,cartItems)}
-      onPress={(checkboxValue)=>selectitem(drink,checkboxValue)}/>)}
-      <DrinkInfo drink={drink}/>
-      <DrinkImage drink={drink}
-      />
-      </View>
-      <Divider width={0.5} orientation='vertical'/>
- 
-    </View>
-    ))}
-         <ViewCart navigation={navigation}/>
-      </ScrollView>
-  );
-}
 
-const DrinkInfo=(props)=>(
-  <View style={{width:240, justifyContent:'space-evenly'}}>
-    <Text style={styles.titleStyle}>{props.drink.title}</Text>
-    <Text>{props.drink.description}</Text>
-    <Text>{props.drink.price}</Text>
-  </View>
-);
-const DrinkImage=(props)=>(
-  <View>
-    <Image source={{uri:props.drink.image}} style={{width:90,height:90,borderRadius:8,marginLeft:-30}}/>
-  </View>
-)
+
+ 
