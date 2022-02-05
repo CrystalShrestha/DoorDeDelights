@@ -78,8 +78,6 @@ export default function UserAccount() {
           </Text>
         </View>
         </TouchableOpacity>
-
-
         <TouchableOpacity style={styles.logoutBtn} onPress={handleLogout}>
           <View
             style={{
