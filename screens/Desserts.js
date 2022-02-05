@@ -77,3 +77,36 @@ const styles = StyleSheet.create({
     }
 })
 
+export default function Desserts({navigation}) {
+  return (
+    <ScrollView showsVerticalScrollIndicator={false}>
+    {cakes.map((dessert,index)=>(
+    <View key={index}>
+    <View style={styles.dessertsItemStyle}>
+      <BouncyCheckbox
+      iconStyle={{borderColor:'lightgray', borderRadius:0}}
+      fillColor='green'/>
+      <CakeInfo dessert={dessert}/>
+      <CakeImage dessert={dessert}/>
+      </View>
+      <Divider width={0.5} orientation='vertical'/>
+ 
+    </View>
+    ))}
+         <ViewCart navigation={navigation}/>
+      </ScrollView>
+  );
+}
+
+const CakeInfo=(props)=>(
+  <View style={{width:240, justifyContent:'space-evenly'}}>
+    <Text style={styles.titleStyle}>{props.dessert.title}</Text>
+    <Text>{props.dessert.description}</Text>
+    <Text>{props.dessert.price}</Text>
+  </View>
+);
+const CakeImage=(props)=>(
+  <View>
+    <Image source={{uri:props.dessert.image}} style={{width:90,height:90,borderRadius:8,marginLeft:-30}}/>
+  </View>
+)
