@@ -1,6 +1,7 @@
 <img src="https://imgur.com/wqMSjgK.png"/>
 
 # Door De' Delights
+<br>
 <p align = "center"> 
 An efficent way to get food in your doorsteps.
 </p>
@@ -92,4 +93,5 @@ To make food ordering and takeaways efficient for the customers and provide an o
 <img src="https://img.shields.io/badge/-Manzil-red"/>
 </a>
 <hr>
+
 
