@@ -55,7 +55,6 @@ export default function UserAccount() {
         🍕 We bring joy to your door🍕
           </Text>
 
-        {/* Yaha Hardcode GARNE! */}
         <TouchableOpacity style={styles.logoutBtn} onPress={()=>navigation.navigate('Aboutus')}>
         <View
           style={{
@@ -79,8 +78,6 @@ export default function UserAccount() {
           </Text>
         </View>
         </TouchableOpacity>
-        {/* </View> */}
-
         <TouchableOpacity style={styles.logoutBtn} onPress={handleLogout}>
           <View
             style={{
@@ -125,13 +122,5 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     bottom: 10,
   },
-  // logoutBtn: {
-  //   width: "40%",
-  //   borderRadius: 25,
-  //   height: 50,
-  //   alignItems: "center",
-  //   justifyContent: "center",
-  //   bottom: -1,
-  //   backgroundColor: "#ffffff",
-  // },
+
 });
