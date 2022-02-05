@@ -12,5 +12,27 @@ An efficent way to get food in your doorsteps.
 </p>
 <h2> AIM: <img src="https://imgur.com/zFz0s6y.png" width="40" height="40"></h2>
 To make food ordering and takeaways efficient for the customers and provide an opportuinity of e-commerce for skillful home chefs.
+<br>
+<br>
+<h2> Features and Functionality:</h2>
+* <img src="https://imgur.com/WtwuRER.png" height="30" width="30"/>
+  Makes ordering of food and takeaways efficient for the customers.
+<br>
+<br>
+* <img src="https://imgur.com/0VpbpCz.png" height="30" width="30"/>
+  Safe login and reistration of user profile and their biling details.
+<br>
+<br>
+* <img src="https://imgur.com/sHHBBPW.png" height="30" width="30"/>
+  User's data storage and database updatation.
+<br>
+<br>
+* <img src="https://imgur.com/h1Tq6WT.png" height="30" width="30"/>
+  Efficient product.
+<br>
+<br>
+* <img src="https://imgur.com/lhBrXe6.png" height="30" width="30"/>
+  Scalable at any number of users.
+<br>
 
 
