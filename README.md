@@ -66,4 +66,30 @@ To make food ordering and takeaways efficient for the customers and provide an o
 
 <br>
 
+<hr>
+<h2> Contributers:</h2>
+<a herf="https://github.com/CrystalShrestha">
+<img src="https://img.shields.io/badge/-Crystal-blue"/>
+</a>
+<br>
+<a herf="https://github.com/Samana19">
+<img src="https://img.shields.io/badge/-Samana-pink"/>
+</a>
+<br>
+<a herf="">
+<img src="https://img.shields.io/badge/-Bipina-orange"/>
+</a>
+<br>
+<a herf="https://github.com/astikagrg">
+<img src="https://img.shields.io/badge/-Astika-teal"/>
+</a>
+<br>
+<a herf="https://github.com/rupikarasaili">
+<img src="https://img.shields.io/badge/-Rupika-yellow"/>
+</a>
+<br>
+<a herf="https://github.com/Manjil00">
+<img src="https://img.shields.io/badge/-Manzil-red"/>
+</a>
+<hr>
 
