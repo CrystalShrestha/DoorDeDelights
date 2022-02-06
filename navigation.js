@@ -24,7 +24,6 @@ import VerifyEmail from "./screens/VerifyEmail";
 import Aboutus from "./screens/Aboutus";
 
 const store = configureStore();
-
 export default function RootNavigation() {
   const Stack = createStackNavigator();
 
@@ -64,3 +63,4 @@ export default function RootNavigation() {
     </ReduxProvider>
   );
 }
+
