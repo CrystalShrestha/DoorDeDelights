@@ -39,7 +39,7 @@ To make food ordering and takeaways efficient for the customers and provide an o
 <h2>Tools and Technology:</h2>
 <img align="left" alt="Terminal" width="26px" src="https://imgur.com/8XrwS01.png" height="30" width="30"/>
 <img  align="left" alt="Terminal" width="26px" src="https://imgur.com/5E7HeGk.png" height="30" width="30"/>
-<img  align="left" alt="Terminal" width="26px" src="https://imgur.com/6uWgJIL.png" height="30" width="30"/>
+<img  align="left" alt="Terminal" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png" height="30" width="30"/>
 <img  align="left" alt="Terminal" width="26px" src="https://imgur.com/AhmJulw.png" height="30" width="30"/>
 <img  align="left" alt="Terminal" width="26px" src="https://imgur.com/tBgmSNq.png" height="30" width="30"/>
 <img  align="left" alt="Terminal" width="26px" src="https://imgur.com/23NB9Vx.png" height="30" width="30"/>
