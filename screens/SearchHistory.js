@@ -11,7 +11,7 @@ export default function SearchHistory() {
       <View style={{ backgroundColor: "white", padding: 15 }}></View>
       <SearchBar cityHandler={setCity} />
       <ScrollView showsVerticalScrollIndicator={false}>
-        {/* Yaha Hardcode GARNE! */}
+        {/*  */}
       </ScrollView>
       <Divider width={1} />
       <BottomTabs />

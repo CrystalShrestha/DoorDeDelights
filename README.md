@@ -1,44 +1,97 @@
-# My Universal React Project
+<p align="center"><img src="https://github.com/CrystalShrestha/DoorDeDelights/blob/e5cf78e42d370514c600777cce596f65cebc2ca6/images/README.png" ></p>
 
-<p>
-  <!-- iOS -->
-  <a href="https://itunes.apple.com/app/apple-store/id982107779">
-    <img alt="Supports Expo iOS" longdesc="Supports Expo iOS" src="https://img.shields.io/badge/iOS-4630EB.svg?style=flat-square&logo=APPLE&labelColor=999999&logoColor=fff" />
-  </a>
-  <!-- Android -->
-  <a href="https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=blankexample">
-    <img alt="Supports Expo Android" longdesc="Supports Expo Android" src="https://img.shields.io/badge/Android-4630EB.svg?style=flat-square&logo=ANDROID&labelColor=A4C639&logoColor=fff" />
-  </a>
-  <!-- Web -->
-  <a href="https://docs.expo.dev/workflow/web/">
-    <img alt="Supports Expo Web" longdesc="Supports Expo Web" src="https://img.shields.io/badge/web-4630EB.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff" />
-  </a>
+## Door De' Delights
+<br>
+<p align = "left"> 
+An efficent way to get food at your doorsteps.
 </p>
+<hr>
 
-## 🚀 How to use
+<h2> The Project:</h2>
+<p align="justify">
+ Door De' Delights is a food delivery app that makes ordering and takeaways of your favorite food from your favorite restaurants/cafes or even from your favorite home chefs within the comfort of your own home. It is not only a food delivery app but also an e-commerce opportunity for small to big restaurant businesses but primarily to some skillful home chefs and home cooks with their own recipes and some love for cooking.
+</p>
+<h2> AIM: <img src="https://imgur.com/zFz0s6y.png" width="40" height="40"></h2>
+To make food ordering and takeaways efficient for the customers and provide an opportuinity of e-commerce for skillful home chefs.
+<br>
+<br>
+<h2> Features and Functionality:</h2>
+* <img src="https://imgur.com/WtwuRER.png" height="30" width="30"/>
+  Makes ordering of food and takeaways efficient for the customers.
+<br>
+<br>
+* <img src="https://imgur.com/0VpbpCz.png" height="30" width="30"/>
+  Safe login and reistration of user profile and their biling details.
+<br>
+<br>
+* <img src="https://imgur.com/sHHBBPW.png" height="30" width="30"/>
+  User's data storage and database updatation.
+<br>
+<br>
+* <img src="https://imgur.com/h1Tq6WT.png" height="30" width="30"/>
+  Efficient product.
+<br>
+<br>
+* <img src="https://imgur.com/lhBrXe6.png" height="30" width="30"/>
+  Scalable at any number of users.
+<br>
+<br>
+<h2>Tools and Technology:</h2>
+<img align="left" alt="Terminal" width="26px" src="https://imgur.com/8XrwS01.png" height="30" width="30"/>
+<img  align="left" alt="Terminal" width="26px" src="https://imgur.com/5E7HeGk.png" height="30" width="30"/>
+<img  align="left" alt="Terminal" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png" height="30" width="30"/>
+<img  align="left" alt="Terminal" width="26px" src="https://imgur.com/AhmJulw.png" height="30" width="30"/>
+<img  align="left" alt="Terminal" width="26px" src="https://imgur.com/tBgmSNq.png" height="30" width="30"/>
+<img  align="left" alt="Terminal" width="26px" src="https://imgur.com/23NB9Vx.png" height="30" width="30"/>
+<img  align="left" alt="Terminal" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" height="30" width="30"/>
+<img  align="left" alt="Terminal" width="26px" src="https://imgur.com/cXg9T6L.png" height="30" width="30"/>
+<img  align="left" alt="Terminal" width="26px" src="https://imgur.com/ldKBKOI.png" height="30" width="30"/>
+<img  align="left" alt="Terminal" width="26px" src="https://imgur.com/sThM4ng.png" height="30" width="30"/>
+<img  align="left" alt="Terminal" width="26px" src="https://imgur.com/MbHNkUa.png" height="30" width="30"/>
+<img  align="left" alt="Terminal" width="26px" src="https://imgur.com/LzyEQLN.png" height="30" width="30"/>
+<img  align="left" alt="Terminal" width="26px" src="https://imgur.com/AwZioKz.png" height="30" width="30"/>
+<img  align="left" alt="Terminal" width="26px" src="https://imgur.com/AIpqX2y.png" height="30" width="30"/>
+<img  align="left" alt="Terminal" width="26px" src="https://imgur.com/fNeoC8l.png" height="30" width="30"/>
+<br>
+<br>
+<h2>Screenshots:</h2>
+<br>
+<img src="https://imgur.com/q9EoA3p.png"width="" height="200"/>
+<img src="https://imgur.com/Fp8xoQW.png"width=" " height="200"/>
+<img src="https://imgur.com/0bFMMck.png"width=" " height="200"/>
+<img src="https://imgur.com/m1N0i2d.png"width=" " height="200"/>
+<img src="https://imgur.com/XSQHMG2.png"width=" " height="200"/>
+<img src="https://imgur.com/PSNFJOF.png"width=" " height="200"/>
+<img src="https://imgur.com/GIZJvl1.png"width=" " height="200"/>
+<img src="https://imgur.com/igxIYY8.png"width=" " height="200"/>
 
-- Install packages with `yarn` or `npm install`.
-  - If you have native iOS code run `npx pod-install`
-- Run `yarn start` to start the bundler.
-- Open the project in a React runtime to try it:
-  - iOS: [Client iOS](https://itunes.apple.com/app/apple-store/id982107779)
-  - Android: [Client Android](https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=blankexample)
-  - Web: Any web browser
+<br>
 
-## Adding Native Code
+<hr>
+<h2> Contributers:</h2>
+<a herf="https://github.com/CrystalShrestha">
+<img src="https://img.shields.io/badge/-Crystal-blue"/>
+</a>
+<br>
+<a herf="https://github.com/Samana19">
+<img src="https://img.shields.io/badge/-Samana-pink"/>
+</a>
+<br>
+<a herf="https://github.com/bipinaghimire">
+<img src="https://img.shields.io/badge/-Bipina-orange"/>
+</a>
+<br>
+<a herf="https://github.com/astikagrg">
+<img src="https://img.shields.io/badge/-Astika-teal"/>
+</a>
+<br>
+<a herf="https://github.com/rupikarasaili">
+<img src="https://img.shields.io/badge/-Rupika-yellow"/>
+</a>
+<br>
+<a herf="https://github.com/Manjil00">
+<img src="https://img.shields.io/badge/-Manzil-red"/>
+</a>
+<hr>
 
-This project can be run from a web browser or the Expo client app. You may find that you want to add more native code later on. You can do this by ejecting the project and rebuilding it yourself.
 
-- Run `yarn eject` to create the native projects.
-- You can still run your project in the web browser or Expo client, you just won't be able to access any new native modules you add.
-
-## Publishing
-
-- Deploy the native app to the App store and Play store using this guide: [Deployment](https://docs.expo.dev/distribution/app-stores/).
-- Deploy the website using this guide: [Web deployment](https://docs.expo.dev/distribution/publishing-websites/).
-
-## 📝 Notes
-
-- Learn more about [Universal React](https://docs.expo.dev/).
-- See what API and components are [available in the React runtimes](https://docs.expo.dev/versions/latest/).
-- Find out more about developing apps and websites: [Guides](https://docs.expo.dev/guides/).

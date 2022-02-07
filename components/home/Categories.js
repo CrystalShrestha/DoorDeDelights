@@ -1,4 +1,3 @@
-import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { View, Text, Image, ScrollView } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
@@ -35,7 +34,7 @@ const items = [
 ];
 
 export default function Categories() {
-  const navigation = useNavigation();
+
   return (
     <View
       style={{
@@ -47,7 +46,7 @@ export default function Categories() {
     >
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {/* Pickup */}
-        <TouchableOpacity onPress={() => navigation.navigate("Pickup")}>
+        <TouchableOpacity >
           <View style={{ alignItems: "center", marginRight: 30 }}>
             <Image
               source={require("../../assets/images/shopping-bag.png")}
@@ -61,7 +60,7 @@ export default function Categories() {
           </View>
         </TouchableOpacity>
         {/* Softdrinks */}
-        <TouchableOpacity onPress={() => navigation.navigate("Softdrinks")}>
+        <TouchableOpacity >
           <View style={{ alignItems: "center", marginRight: -55 }}>
             <Image
               source={require("../../assets/images/soft-drink.png")}
@@ -79,7 +78,7 @@ export default function Categories() {
         </TouchableOpacity>
 
         {/* Bakery */}
-        <TouchableOpacity onPress={() => navigation.navigate("Bakery")}>
+        <TouchableOpacity >
           <View style={{ alignItems: "center", marginRight: -55 }}>
             <Image
               source={require("../../assets/images/bread.png")}
@@ -97,7 +96,7 @@ export default function Categories() {
         </TouchableOpacity>
 
         {/* FastFoods */}
-        <TouchableOpacity onPress={() => navigation.navigate("Fastfood")}>
+        <TouchableOpacity>
           <View style={{ alignItems: "center", marginRight: -55 }}>
             <Image
               source={require("../../assets/images/fast-food.png")}
@@ -115,7 +114,7 @@ export default function Categories() {
         </TouchableOpacity>
 
         {/* Deals */}
-        <TouchableOpacity onPress={() => navigation.navigate("Deals")}>
+        <TouchableOpacity >
           <View style={{ alignItems: "center", marginRight: -55 }}>
             <Image
               source={require("../../assets/images/deals.png")}
@@ -133,7 +132,7 @@ export default function Categories() {
         </TouchableOpacity>
 
         {/* Tea and coffee */}
-        <TouchableOpacity onPress={() => navigation.navigate("CoffeeTea")}>
+        <TouchableOpacity >
           <View style={{ alignItems: "center", marginRight: -55 }}>
             <Image
               source={require("../../assets/images/coffee.png")}
@@ -152,7 +151,7 @@ export default function Categories() {
         </TouchableOpacity>
 
         {/* Desserts */}
-        <TouchableOpacity onPress={() => navigation.navigate("Desserts")}>
+        <TouchableOpacity >
           <View style={{ alignItems: "center", marginRight: -55 }}>
             <Image
               source={require("../../assets/images/desserts.png")}

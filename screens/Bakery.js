@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
 })
 
 export default function Bakery({navigation}) {
-  const restaurant = "Bake De Delights";
+
   const dispatch= useDispatch();
 
 
@@ -98,7 +98,7 @@ export default function Bakery({navigation}) {
     type:'ADD_TO_CART', 
     payload:{
       ...item,
-      restaurantName: restaurant,
+
       checkboxValue:checkboxValue}
   })
   const  cartItems= useSelector(
@@ -141,4 +141,4 @@ const BakeImage=(props)=>(
   <View>
     <Image source={{uri:props.bake.image}} style={{width:90,height:90,borderRadius:8,marginLeft:-30}}/>
   </View>
-)
+

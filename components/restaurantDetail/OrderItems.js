@@ -1,7 +1,6 @@
 import React from "react";
 import { View, Text } from "react-native";
 
-
 export default function OrderItem({ item }) {
   const { title, price } = item;
   return (

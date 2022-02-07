@@ -60,7 +60,7 @@ export default function BottomTabs() {
     </View>
   );
 }
-
+///ionicons
 const Icon = (props) => (
   <TouchableOpacity>
     <View>

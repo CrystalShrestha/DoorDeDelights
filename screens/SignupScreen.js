@@ -1,9 +1,8 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
-import navigation from "../navigation";
-import { auth } from '../firebase'
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import firebase from "firebase";
+import { auth } from "../firebase";
 
 import {
   StyleSheet,
@@ -11,35 +10,69 @@ import {
   View,
   Image,
   TextInput,
-  Button,
   TouchableOpacity,
 } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import { Icon } from "react-native-elements/dist/icons/Icon";
 
 export default function SignupScreen() {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [cpassword, setCpassword] = useState("");
+  const[address,setAddress]=useState("");
   const [email, setEmail] = useState("");
   const [phonenumber, setPhonenumber] = useState("");
 
   const navigation = useNavigation();
+  const [data, setData] = React.useState({
+    password: '',
+    check_textInputChange: false,
+    secureTextEntry: true,
+  })
+
+
+  const updateSecureTextEntry = () => {
+    setData({
+      ...data,
+      secureTextEntry: !data.secureTextEntry,
+    });
+  }
 
   const handleSignup = () => {
+    if (password!==cpassword){
+      alert("Password dont match")
+      return
+    }
     auth
+    .createUserWithEmailAndPassword(email,password)
+    .then((response)=>{
+      const uid = response.user.uid
+      const data ={
+        id: uid,
+        email:email,
+        name:name,
+        address:address,
+        phonenumber:phonenumber
+      }
 
-      .createUserWithEmailAndPassword(email, password)
 
-      .then((userCredentials) => {
-        const user = userCredentials.user;
+      const userRef= firebase.firestore().collection('users')
+      userRef
+        .doc(uid)
+        .set(data)
+        .then(() => {
+          navigation.navigate('Home, {user: data')
+          
+        })
+        .catch((error) => {
+          alert(error)
+        })
+    })
+    .catch((error) => {
+      alert(error)
+    })
+  }
 
-        console.log(user.email);
-        // console.log(user.password);
-        // console.log(user.cpassword);
-      })
-
-      .catch((error) => alert(error.message));
-  };
 
   return (
     <View style={styles.container}>
@@ -86,21 +119,50 @@ export default function SignupScreen() {
             marginTop: 10,
           }}
         >
-          <Ionicons name="key-sharp" size={24} />
+          
         </View>
+        <TouchableOpacity onPress={updateSecureTextEntry}>
+          <Icon name="check" color="black" size={24} style={{marginLeft:240,bottom:-2}} />
+          </TouchableOpacity>
+          <Ionicons name="key-sharp" size={24}style={{marginRight:240,marginBottom:-20, bottom:23}} />
         <TextInput
           style={styles.TextInput}
           placeholder="Password."
-          // onChange={(event) => {
-          //   setPassword(event.target.value);
-          // }}
           value={password}
           placeholderTextColor="#003f5c"
           onChangeText={password => setPassword(password)}
-          secureTextEntry
+          secureTextEntry={data.secureTextEntry ? true : false}
         />
       </View>
 
+      <StatusBar style="auto" />
+      <View style={styles.inputView}>
+        <View
+          style={{
+            marginRight: "90%",
+            alignItems: "center",
+            justifyContent: "center",
+            marginTop: 10,
+            
+          }}
+        >
+          
+        </View>
+        <TouchableOpacity onPress={updateSecureTextEntry}>
+          <Icon name="check" color="black" size={24} style={{marginLeft:240,bottom:-2}} />
+          </TouchableOpacity>
+          <Ionicons name="key-sharp" size={24} style={{marginRight:240, marginBottom:-20,bottom:23}} />
+        <TextInput
+          style={styles.TextInput}
+          placeholder="Confirm Password."
+          value={cpassword}
+          placeholderTextColor="#003f5c"
+          onChangeText={cpassword => setCpassword(cpassword)}
+          secureTextEntry={data.secureTextEntry ? true : false}
+        />
+      </View>
+
+{/* //hewooo */}
       <StatusBar style="auto" />
       <View style={styles.inputView}>
         <View
@@ -111,19 +173,17 @@ export default function SignupScreen() {
             marginTop: 10,
           }}
         >
-          <Ionicons name="key-sharp" size={24} />
+          <Ionicons name="home-sharp" size={24} />
         </View>
 
         <TextInput
           style={styles.TextInput}
-          placeholder="Confirm Password."
-          // onChange={(event) => {
-          //   setCpassword(event.target.value);
-          // }}
-          value={cpassword}
+          placeholder="Address."
+
+          value={address}
           placeholderTextColor="#003f5c"
-          onChangeText={cpassword => setCpassword(cpassword)}
-          secureTextEntry
+          onChangeText={address => setAddress(address)}
+          
         />
       </View>
 
