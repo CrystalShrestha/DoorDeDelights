@@ -1,6 +1,6 @@
 <p align="center"><img src="https://github.com/CrystalShrestha/DoorDeDelights/blob/e5cf78e42d370514c600777cce596f65cebc2ca6/images/README.png" ></p>
 
-### Door De' Delights
+## Door De' Delights
 <br>
 <p align = "center"> 
 An efficent way to get food in your doorsteps.
@@ -37,21 +37,21 @@ To make food ordering and takeaways efficient for the customers and provide an o
 <br>
 <br>
 <h2>Tools and Technology:</h2>
-<img src="https://imgur.com/8XrwS01.png" height="30" width="30"/>
-<img src="https://imgur.com/5E7HeGk.png" height="30" width="30"/>
-<img src="https://imgur.com/6uWgJIL.png" height="30" width="30"/>
-<img src="https://imgur.com/AhmJulw.png" height="30" width="30"/>
-<img src="https://imgur.com/tBgmSNq.png" height="30" width="30"/>
-<img src="https://imgur.com/23NB9Vx.png" height="30" width="30"/>
-<img src="https://imgur.com/ygSzJGN.png" height="30" width="30"/>
-<img src="https://imgur.com/cXg9T6L.png" height="30" width="30"/>
-<img src="https://imgur.com/ldKBKOI.png" height="30" width="30"/>
-<img src="https://imgur.com/sThM4ng.png" height="30" width="30"/>
-<img src="https://imgur.com/MbHNkUa.png" height="30" width="30"/>
-<img src="https://imgur.com/LzyEQLN.png" height="30" width="30"/>
-<img src="https://imgur.com/AwZioKz.png" height="30" width="30"/>
-<img src="https://imgur.com/AIpqX2y.png" height="30" width="30"/>
-<img src="https://imgur.com/fNeoC8l.png" height="30" width="30"/>
+<img align="left" alt="Terminal" width="26px" src="https://imgur.com/8XrwS01.png" height="30" width="30"/>
+<img  align="left" alt="Terminal" width="26px" src="https://imgur.com/5E7HeGk.png" height="30" width="30"/>
+<img  align="left" alt="Terminal" width="26px" src="https://imgur.com/6uWgJIL.png" height="30" width="30"/>
+<img  align="left" alt="Terminal" width="26px" src="https://imgur.com/AhmJulw.png" height="30" width="30"/>
+<img  align="left" alt="Terminal" width="26px" src="https://imgur.com/tBgmSNq.png" height="30" width="30"/>
+<img  align="left" alt="Terminal" width="26px" src="https://imgur.com/23NB9Vx.png" height="30" width="30"/>
+<img  align="left" alt="Terminal" width="26px" src="https://imgur.com/ygSzJGN.png" height="30" width="30"/>
+<img  align="left" alt="Terminal" width="26px" src="https://imgur.com/cXg9T6L.png" height="30" width="30"/>
+<img  align="left" alt="Terminal" width="26px" src="https://imgur.com/ldKBKOI.png" height="30" width="30"/>
+<img  align="left" alt="Terminal" width="26px" src="https://imgur.com/sThM4ng.png" height="30" width="30"/>
+<img  align="left" alt="Terminal" width="26px" src="https://imgur.com/MbHNkUa.png" height="30" width="30"/>
+<img  align="left" alt="Terminal" width="26px" src="https://imgur.com/LzyEQLN.png" height="30" width="30"/>
+<img  align="left" alt="Terminal" width="26px" src="https://imgur.com/AwZioKz.png" height="30" width="30"/>
+<img  align="left" alt="Terminal" width="26px" src="https://imgur.com/AIpqX2y.png" height="30" width="30"/>
+<img  align="left" alt="Terminal" width="26px" src="https://imgur.com/fNeoC8l.png" height="30" width="30"/>
 <br>
 <br>
 <h2>Screenshots:</h2>
