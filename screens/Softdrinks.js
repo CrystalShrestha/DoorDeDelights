@@ -10,64 +10,61 @@ import { useSelector } from "react-redux";
 const drinks=[
   {
   title: "Coca-cola",
-  description:'chill your mind out',
+  description:'It`s the Real Thing"',
   price:'$1.70',
   image: 'https://images.heb.com/is/image/HEBGrocery/000145352'
 },
 {
   title: "Fanta",
-  description:'chill your mind out',
+  description:'Wanna Fanta, don`t you wanta? Fanta, Fanta because it is great fun and tastes. More Fanta. Less Serious.',
   price:'$1.70',
   image: 'https://static.countdown.co.nz/assets/product-images/zoom/9300675015172.jpg'
 },
 {
   title: "Mountain Dew",
-  description:'chill your mind out',
+  description:'Do the DEW',
   price:'$1.70',
-  image: 'https://static.countdown.co.nz/assets/product-images/zoom/9300675015172.jpg'
+  image: 'https://www.luluhypermarket.com/medias/450547-01.jpg-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wzMzUyMzF8aW1hZ2UvanBlZ3xoNzIvaGU2LzEyNDUxOTg3ODgyMDE0LzQ1MDU0Ny0wMS5qcGdfMTIwMFd4MTIwMEh8NDMxNDUzM2FkN2QxOGRkZWE4ZjY4MDdjM2NhYTE4MWY5YzU4ODdlMGY3OGNkZjk1YWM3YmE5ZjQ0ZjhkZGUzMg'
 },
 {
   title: "Pepsi",
-  description:'chill your mind out',
+  description:'That`s What I Like',
   price:'$1.70',
-  image: 'https://static.countdown.co.nz/assets/product-images/zoom/9300675015172.jpg'
+  image: 'https://images.heb.com/is/image/HEBGrocery/000026101?fit=constrain,1&wid=800&hei=800&fmt=jpg&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0'
 },
 {
   title: "Dr.Pepper",
-  description:'chill your mind out',
+  description:' Be a Pepper. Be You',
   price:'$1.70',
-  image: 'https://static.countdown.co.nz/assets/product-images/zoom/9300675015172.jpg'
+  image: 'https://i5.walmartimages.com/asr/c1bd00b2-50a3-44ce-bb27-04177224fbd6.25a6500f2249f58f1fbd5909f2a264f7.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF'
 },
 {
   title: "Sprite",
-  description:'chill your mind out',
+  description:'Obey Your Thirst',
   price:'$1.70',
-  image: 'https://static.countdown.co.nz/assets/product-images/zoom/9300675015172.jpg'
+  image: 'https://cheers.com.np/uploads/products/438481373780088939486339356725867799854.png'
 },
 {
   title: "Slice",
-  description:'chill your mind out',
+  description:'Thickest Mango Drink',
   price:'$1.70',
-  image: 'https://static.countdown.co.nz/assets/product-images/zoom/9300675015172.jpg'
+  image: 'http://www.grocyhub.com/image/cache/catalog/snacks_beverages/soft_drinks/pepsi/slice-soft-drink-mango-2ltr_1-800x800.jpg'
 },
 {
   title: "Red Bull",
-  description:'chill your mind out',
+  description:'Red Bull Gives You Wings',
   price:'$1.70',
-  image: 'https://static.countdown.co.nz/assets/product-images/zoom/9300675015172.jpg'
+  image: 'https://fatafatsewa.com/storage/media/3214/ykSeb02303.jpg'
 },
 {
-  title: "Slice",
-  description:'chill your mind out',
+  title: "7-up",
+  description:'100% Natural. Crisp and clean. No caffeine.',
   price:'$1.70',
-  image: 'https://static.countdown.co.nz/assets/product-images/zoom/9300675015172.jpg'
+  image: 'https://cdnprod.mafretailproxy.com/sys-master-root/h4d/h73/14584250728478/3793_main.jpg_480Wx480H'
 },
 
 
 ];
-
-
-
 
 const styles = StyleSheet.create({
     drinkItemStyle: {
@@ -83,7 +80,7 @@ const styles = StyleSheet.create({
 
 
 
-export default function Softdrinks({navigation,hideCheckbox, marginLeft}) {
+export default function Softdrinks({navigation,hideCheckbox}) {
   const dispatch= useDispatch();
 
 const selectitem = (item, checkboxValue)=>
@@ -100,26 +97,25 @@ const  cartItems= useSelector(
   const isDrinkInCart= (drink, cartItems)=>
     Boolean(cartItems.find((item)=> item.title === drink.title));
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>
-    {drinks.map((drink,index)=>(
-    <View key={index}>
-    <View style={styles.drinkItemStyle}>
-      {hideCheckbox?(<></>):(
-      <BouncyCheckbox
-      iconStyle={{borderColor:'lightgray', borderRadius:0}}
-      fillColor='green'
-      isChecked={isDrinkInCart(drink,cartItems)}
-      onPress={(checkboxValue)=>selectitem(drink,checkboxValue)}/>)}
-      <DrinkInfo drink={drink}/>
-      <DrinkImage drink={drink}
-      />
-      </View>
-      <Divider width={0.5} orientation='vertical'/>
- 
-    </View>
-    ))}
-         <ViewCart navigation={navigation}/>
-      </ScrollView>
+    <><ScrollView showsVerticalScrollIndicator={false}>
+      {drinks.map((drink, index) => (
+        <View key={index}>
+          <View style={styles.drinkItemStyle}>
+            {hideCheckbox ? (<></>) : (
+              <BouncyCheckbox
+                iconStyle={{ borderColor: 'lightgray', borderRadius: 0 }}
+                fillColor='green'
+                isChecked={isDrinkInCart(drink, cartItems)}
+                onPress={(checkboxValue) => selectitem(drink, checkboxValue)} />)}
+            <DrinkInfo drink={drink} />
+            <DrinkImage drink={drink} />
+          </View>
+          <Divider width={0.5} orientation='vertical' />
+
+        </View>
+      ))}
+
+    </ScrollView><ViewCart navigation={navigation} /></>
   );
 }
 
