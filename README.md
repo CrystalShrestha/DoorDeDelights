@@ -69,11 +69,11 @@ To make food ordering and takeaways efficient for the customers and provide an o
 
 <hr>
 <h2> Contributers:</h2>
-<a herf="https://github.com/CrystalShrestha">
+<a align="left" herf="https://github.com/CrystalShrestha">
 <img src="https://img.shields.io/badge/-Crystal-blue"/>
 </a>
 <br>
-<a herf="https://github.com/Samana19">
+<a align="left" herf="https://github.com/Samana19">
 <img src="https://img.shields.io/badge/-Samana-pink"/>
 </a>
 <br>
