@@ -1,6 +1,6 @@
 <p align="center"><img src="https://github.com/CrystalShrestha/DoorDeDelights/blob/e5cf78e42d370514c600777cce596f65cebc2ca6/images/README.png" ></p>
 
-## Door De' Delights
+### Door De' Delights
 <br>
 <p align = "center"> 
 An efficent way to get food in your doorsteps.
