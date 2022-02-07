@@ -1,6 +1,6 @@
-<img src="https://imgur.com/wqMSjgK.png"/>
+<p align="center"><img src="https://imgur.com/wqMSjgK.png"></p>
 
-# Door De' Delights
+## Door De' Delights
 <br>
 <p align = "center"> 
 An efficent way to get food in your doorsteps.
