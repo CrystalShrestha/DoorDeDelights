@@ -43,7 +43,7 @@ To make food ordering and takeaways efficient for the customers and provide an o
 <img  align="left" alt="Terminal" width="26px" src="https://imgur.com/AhmJulw.png" height="30" width="30"/>
 <img  align="left" alt="Terminal" width="26px" src="https://imgur.com/tBgmSNq.png" height="30" width="30"/>
 <img  align="left" alt="Terminal" width="26px" src="https://imgur.com/23NB9Vx.png" height="30" width="30"/>
-<img  align="left" alt="Terminal" width="26px" src="https://imgur.com/ygSzJGN.png" height="30" width="30"/>
+<img  align="left" alt="Terminal" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" height="30" width="30"/>
 <img  align="left" alt="Terminal" width="26px" src="https://imgur.com/cXg9T6L.png" height="30" width="30"/>
 <img  align="left" alt="Terminal" width="26px" src="https://imgur.com/ldKBKOI.png" height="30" width="30"/>
 <img  align="left" alt="Terminal" width="26px" src="https://imgur.com/sThM4ng.png" height="30" width="30"/>
