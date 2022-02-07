@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/CrystalShrestha/DoorDeDelights/blob/e5cf78e42d370514c600777cce596f65cebc2ca6/images/README.png" width="290"></p>
+<p align="center"><img src="https://github.com/CrystalShrestha/DoorDeDelights/blob/e5cf78e42d370514c600777cce596f65cebc2ca6/images/README.png" ></p>
 
 ## Door De' Delights
 <br>
