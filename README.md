@@ -2,8 +2,8 @@
 
 ## Door De' Delights
 <br>
-<p align = "center"> 
-An efficent way to get food in your doorsteps.
+<p align = "left"> 
+An efficent way to get food at your doorsteps.
 </p>
 <hr>
 
