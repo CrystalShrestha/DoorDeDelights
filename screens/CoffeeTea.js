@@ -10,21 +10,21 @@ import { useSelector } from "react-redux";
 const coffee = [
   {
     title: "Americano",
-    description: "chill your mind out",
+    description: "an espresso drink made with hot water and espresso",
     price: "$1.70",
     image:
       "https://www.cleantechloops.com/wp-content/uploads/2021/10/what-is-americano-coffee.jpg",
   },
   {
     title: "Cafe Latte",
-    description: "chill your mind out",
+    description: "an espresso with milk",
     price: "$1.70",
     image:
       "https://www.roastycoffee.com/wp-content/uploads/mBPxUtTx-480x480.jpeg",
   },
   {
     title: "Cappuccino",
-    description: "chill your mind out",
+    description: "a single espresso shot and hot milk, with the surface topped with foamed milk",
     price: "$1.70",
     image:
       "https://www.acouplecooks.com/wp-content/uploads/2020/10/how-to-make-cappuccino-005.jpg",
@@ -32,7 +32,7 @@ const coffee = [
 
   {
     title: "Italian Espresso",
-    description: "chill your mind out",
+    description: "Double shot expresso. No more depresso",
     price: "$1.70",
     image:
       "https://www.italymagazine.com/sites/default/files/story/espresso_0.jpg",
@@ -40,28 +40,28 @@ const coffee = [
 
   {
     title: "Cold Brew",
-    description: "chill your mind out",
+    description: "Made chilled, never heated ",
     price: "$1.70",
     image:
       "https://www.thedinnerbite.com/wp-content/uploads/2021/07/cold-brew-img-4.jpg",
   },
   {
     title: "Frappuccino",
-    description: "chill your mind out",
+    description: "Blended iced coffee drinks ",
     price: "$1.70",
     image:
       "https://celebratingsweets.com/wp-content/uploads/2017/06/Espresso-Chip-Frappe-2.jpg",
   },
   {
     title: "Matcha Tea",
-    description: "chill your mind out",
+    description: "a Japanese green tea powder made from finely powdered dried tea leaves",
     price: "$1.70",
     image:
       "https://i.dailymail.co.uk/1s/2019/01/16/12/8591676-0-image-a-2_1547643509865.jpg",
   },
   {
     title: "Oolong Tea",
-    description: "chill your mind out",
+    description: "made from the leaves of the Camellia sinensis plant, the same plant used to make green tea and black tea",
     price: "$1.70",
     image:
       "https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2017/05/26/Pictures/green-tea-shutterstock_b6993628-41c7-11e7-b7e5-3de2b6485255.jpg",
@@ -69,14 +69,14 @@ const coffee = [
 
   {
     title: "Green Tea",
-    description: "chill your mind out",
+    description: "made from unoxidized leaves and is one of the least processed types of tea",
     price: "$1.70",
     image:
       "https://images-prod.healthline.com/hlcmsresource/images/AN_images/green-tea-and-leaves-1296x728.jpg",
   },
   {
     title: "Bubble Milk Tea",
-    description: "chill your mind out",
+    description: "An incredibly unique looking taiwanese beverage",
     price: "$1.70",
     image:
       "https://brewedleaflove.com/wp-content/uploads/2019/07/how-to-make-bubble-tea-682x1024.jpg",
@@ -96,23 +96,39 @@ const styles = StyleSheet.create({
 });
 
 export default function CoffeeTea({ navigation }) {
+  const dispatch= useDispatch();
+
+  const selectitem = (item, checkboxValue)=>
+  dispatch({
+    type:'ADD_TO_CART', 
+    payload:{
+      ...item,
+      checkboxValue:checkboxValue}
+  })
+  const  cartItems= useSelector(
+    state=> state.cartReducer.selectedItems.items 
+    );
+  
+    const isTeaInCart= (tea, cartItems)=>
+      Boolean(cartItems.find((item)=> item.title === tea.title));
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>
+    <><ScrollView showsVerticalScrollIndicator={false}>
       {coffee.map((tea, index) => (
         <View key={index}>
           <View style={styles.TeaItemStyle}>
             <BouncyCheckbox
               iconStyle={{ borderColor: "lightgray", borderRadius: 0 }}
               fillColor="green"
-            />
+              isChecked={isTeaInCart(tea, cartItems)}
+              onPress={(checkboxValue) => selectitem(tea, checkboxValue)} />
             <CoffeeTeaInfo tea={tea} />
             <CoffeeTeaImage tea={tea} />
           </View>
           <Divider width={0.5} orientation="vertical" />
         </View>
       ))}
-      <ViewCart navigation={navigation} />
-    </ScrollView>
+
+    </ScrollView><ViewCart navigation={navigation} /></>
   );
 }
 
